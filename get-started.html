@@ -11,26 +11,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script>
-			var $form = $('form#test-form'),
-				url = 'https://script.google.com/macros/s/AKfycbwy4N6uuULG6GAeUViT2j2hKBusSF4JGYSfTNB-hN4vSjgp6WO0RQvm/exec'
-
-			$('#submit-form').on('click', function(e) {
-			e.preventDefault();
-			var jqxhr = $.ajax({
-				url: url,
-				method: "GET",
-				dataType: "json",
-				data: $form.serializeObject()
-			}).success(
-				console.log("blah")
-				// do something
-			);
-			})
-		</script>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+		<script src="assets/js/firebase.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -63,9 +46,8 @@
 
 								<h1>Register (optional)</h1>
 								<p> Register your details below to display your shop on our map so that people can find it more easily.</p>
-
 								
-								<form id="test-form">
+								<form action="/.netlify/functions/register" method="POST">
 									
 									<label for="name">Name:</label>
 									<input type="text" id="name" name="name" required><br>
