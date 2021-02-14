@@ -4,7 +4,7 @@
   "description": "Stellar by HTML5 UP\r html5up.net | @ajlkn\r Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)",
   "main": "index.js",
   "scripts": {
-    "functions": "cd functions/register && yarn install",
+    "functions": "cd functions && yarn install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
