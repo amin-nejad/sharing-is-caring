@@ -1,0 +1,11 @@
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "register.js",
+  "scripts": {},
+  "author": "",
+  "dependencies": {
+    "firebase": "^8.2.7"
+  }
+}
