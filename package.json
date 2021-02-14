@@ -1,0 +1,11 @@
+{
+  "name": "sharing-is-caring",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "functions": "cd functions && yarn install"
+  },
+  "repository": "https://github.com/amin-nejad/sharing-is-caring.git",
+  "author": "Ali Amin-Nejad <aanejad@hotmail.co.uk>",
+  "license": "MIT"
+}
