@@ -1,3 +1,7 @@
 [build]
   functions = "functions"
   command = "yarn functions"
+[[redirects]]
+    from = "/api/register"
+    to = "/.netlify/functions/register"
+    status = 200
