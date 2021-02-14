@@ -12,8 +12,31 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
-		<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
-		<script src="assets/js/firebase.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+		<script src="http://malsup.github.com/jquery.form.js"></script> 
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+		<script>
+			$('#register')
+			.ajaxForm({
+				success : function (response) {
+					Swal.fire({
+					title: 'Success!',
+					text: 'You successfully registered your business. It may take up to 48 hours for it to display on the map.',
+					icon: 'success'}
+					)
+				},
+				error : function(jqXHR, exception){
+					Swal.fire({
+						icon: 'error',
+						title: 'Oops...',
+						text: 'Something went wrong!',
+					})
+				}
+			});
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -47,7 +70,7 @@
 								<h1>Register (optional)</h1>
 								<p> Register your details below to display your shop on our map so that people can find it more easily.</p>
 								
-								<form action="/.netlify/functions/register" method="POST">
+								<form id="register" action="/.netlify/functions/register" method="POST">
 									
 									<label for="name">Name:</label>
 									<input type="text" id="name" name="name" required><br>
