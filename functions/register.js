@@ -24,7 +24,8 @@ exports.handler = async (event) => {
   try {
     const body = qs.parse(event.body.toString());
     const {name, email, service, gmap} = body
-    return firebase.database().ref('registrations').push().set({name, email, service, gmap})
+    const datetime =  new Date().toLocaleString('en-GB', { timeZone: 'UTC' })
+    return firebase.database().ref('registrations').push().set({datetime, name, email, service, gmap})
       .then((result) => {
         return {
           statusCode: 200,
