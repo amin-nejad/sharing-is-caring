@@ -17,6 +17,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
 		<script src="https://malsup.github.io/jquery.form.js"></script> 
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+		<link rel="stylesheet" href="style.css" />
 		<script>
 			$('#register').ajaxForm({
 				success : function (response) {
@@ -47,29 +48,30 @@
 						<p>For small businesses</p>
 					</header>
 					<div style="margin-bottom: 10px;">
-						<a href="./">Back to Homepage</a>
+						<a href="./">&#127968; Back to Homepage</a>
 					</div>
 						<!-- Main -->
 					<div id="main">
 
 						<!-- Content -->
 							<section id="content" class="main">
-								<span class="image main"><img src="images/andreas2.jpg" alt="" /></span>
-								<h1>What you need</h1>
+								<span class="image main"><img src="images/sharing-is-caring-board.jpg" alt="" /></span>
+								<h1>What you need to do</h1>
 								<ul>
-									<li>A board</li>
-									<li>Some paper</li>
-									<li>Logo <a download="sharing-is-caring-logo.jpeg" href="images/logo.jpeg" style="color: blue"> <b>(download)</b></a></li>
+									<li>Sign up here using the registration form below</li>
+									<li>Download the Logo <a download="sharing-is-caring-logo.jpeg" href="images/logo.jpeg" style="color: blue"> <b>(download)</b></a></li>
+									<li>Get creative and set up your board in your business</li>
+									<li>Promote your scheme</li>
 								  </ul>
 								<p>It's as simple as that.</p>
 								<p>Just display some "tickets" or "tokens" or whatever you can on an accessible display board in your shop for customers to come in and pick up to exchange for a particular item or service.</p>
-								<p>Whenever a paying customer donates towards the sharing and caring scheme, add another ticket to the board</p>
+								<p>Whenever a paying customer donates towards the sharing and caring scheme, add another ticket to the board.</p>
 								<p>Print off the sharing and caring logo and display it in your shop window to alert passers-by that you have signed up to the scheme.</p>
 								
 
-								<h1>Register (optional)</h1>
+								<h1>Register </h1>
 								<p> Register your details below to display your shop on our map so that people can find it more easily.</p>
-								
+
 								<form id="register" action="/api/register" method="post">
 									
 									<label for="name">Name:</label>
@@ -79,9 +81,19 @@
 
 									<label for="businessName">Business Name:</label>
 									<input type="text" id="businessName" name="businessName" required><br>
+
+									<label for="businessWebsite">
+										Website: 
+										<div class="tooltip"><i class="fas fa-info-circle"></i>
+											<span class="tooltiptext">
+												Provide a URL to your own website or facebook page, etc. so users can find you online.
+											</span>
+										</div>
+									</label>
+									<input type="url" id="businessWebsite" name="businessWebsite" required><br>									
 									
 									<label for="shortDescription">Short Description:</label>
-									<input type="text" id="shortDescription" name="shortDescription" required><br>
+									<textarea type="text" id="shortDescription" name="shortDescription" maxlength="140" required></textarea><br>
 
 									<label for="service">Service:</label>
 									<input type="radio" id="food" name="service" value="food" required>
@@ -93,9 +105,16 @@
 									<input type="radio" id="other" name="service" value="other">
 									<label for="other">Other</label><br><br>
 
-									<label for="gmap">Google maps link:</label>
+									<label for="gmap">
+										Google maps link: 
+										<div class="tooltip"><i class="fas fa-info-circle"></i>
+											<span class="tooltiptext">
+												This will be used to find the location of your business to display on the map. Must be a 'google.com/maps' link or the shortened 'goo.gl/maps' version
+											</span>
+										</div>
+									</label>
 									<input type="url" id="gmap" name="gmap" placeholder="https://goo.gl/maps/TEefidKxb9FvG5eL6"
-									pattern="https://goo.gl/maps/.*" required><br><br>
+									pattern="^https:\/\/www.google.com\/maps\/place\/.*$|^https:\/\/goo.gl\/maps\/.*$" required><br><br>
 
 									<div class="wrapper" style="text-align: center;">
 										<input type="submit" id="submit-form">
@@ -105,7 +124,7 @@
 
 					</div>
 					<div style="margin-top: 10px;">
-						<a href="./">Back to Homepage</a>
+						<a href="./">&#127968; Back to Homepage</a>
 					</div>
 
 				<!-- Footer -->
