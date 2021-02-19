@@ -18,6 +18,32 @@
 		<script src="https://malsup.github.io/jquery.form.js"></script> 
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 		<link rel="stylesheet" href="style.css" />
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqglJSf_vJ6tO7diX8Un6e93BykZiZDk4&sensor=false&libraries=places">
+		</script>
+		<script>
+			function init() {
+				var input = document.getElementById('gmap');
+				const options = {
+					componentRestrictions: { country: "uk" },
+					types: ["establishment"],
+				};
+				var autocomplete = new google.maps.places.Autocomplete(input, options);
+				autocomplete.setFields(['address_components', 'geometry', 'name', 'url', 'place_id', 'website']);
+				google.maps.event.addListener(autocomplete, 'place_changed', function () {
+					var place = autocomplete.getPlace();
+					document.getElementById('businessName').value = place.name;
+					document.getElementById('gmapLat').value = place.geometry.location.lat();
+					document.getElementById('gmapLong').value = place.geometry.location.lng();
+					document.getElementById('gmapPlaceID').value = place.place_id;
+					document.getElementById('gmapURL').value = place.url;
+					document.getElementById('gmapWebsite').value = place.website;
+				});
+			}
+
+        	google.maps.event.addDomListener(window, 'load', init);
+
+
+		</script>
 		<script>
 			$('#register').ajaxForm({
 				success : function (response) {
@@ -79,22 +105,22 @@
 									<label for="email">Email:</label>
 									<input type="email" id="email" name="email" required><br>
 
-									<label for="businessName">Business Name:</label>
-									<input type="text" id="businessName" name="businessName" required><br>
-
-									<label for="businessWebsite">
-										Website: 
+									<label for="gmap">
+										Google Maps Location: 
 										<div class="tooltip"><i class="fas fa-info-circle"></i>
 											<span class="tooltiptext">
-												Provide a URL to your own website or facebook page, etc. so users can find you online.
+												This will be used to find the location of your business to display on the map and get the name and website.
 											</span>
 										</div>
 									</label>
-									<input type="url" id="businessWebsite" name="businessWebsite" required><br>									
-									
-									<label for="shortDescription">Short Description:</label>
-									<textarea type="text" id="shortDescription" name="shortDescription" maxlength="140" required></textarea><br>
+									<input type="text" id="gmap" size="50" required><br>
 
+									<label for="businessName">Business Name:</label>
+									<input type="text" id="businessName" name="businessName" style="color: #a73939" required readonly><br>
+
+									<label for="gmapWebsite">Website:</label>
+									<input type="url" id="gmapWebsite" name="businessWebsite" style="color: #a73939" required readonly><br>									
+									
 									<label for="service">Service:</label>
 									<input type="radio" id="food" name="service" value="food" required>
 									<label for="food">Food</label><br>
@@ -105,16 +131,14 @@
 									<input type="radio" id="other" name="service" value="other">
 									<label for="other">Other</label><br><br>
 
-									<label for="gmap">
-										Google maps link: 
-										<div class="tooltip"><i class="fas fa-info-circle"></i>
-											<span class="tooltiptext">
-												This will be used to find the location of your business to display on the map. Must be a 'google.com/maps' link or the shortened 'goo.gl/maps' version
-											</span>
-										</div>
-									</label>
-									<input type="url" id="gmap" name="gmap" placeholder="https://goo.gl/maps/TEefidKxb9FvG5eL6"
-									pattern="^https:\/\/www.google.com\/maps\/place\/.*$|^https:\/\/goo.gl\/maps\/.*$" required><br><br>
+									<input type="hidden" id="gmapLat" name="gmapLat">
+									<input type="hidden" id="gmapLong" name="gmapLong">
+									<input type="hidden" id="gmapURL" name="gmapURL">
+									<input type="hidden" id="gmapWebsite" name="gmapWebsite">
+									<input type="hidden" id="gmapPlaceID" name="gmapPlaceID">
+
+									<input type="checkbox" id="consent" name="consent" value="consent" required>
+									<label for="consent"> I consent to Sharing is Caring Serve our Nation storing my personal information for the purposes of this charitable scheme and nothing else.</label><br>
 
 									<div class="wrapper" style="text-align: center;">
 										<input type="submit" id="submit-form">
