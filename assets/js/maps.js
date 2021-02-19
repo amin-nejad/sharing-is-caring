@@ -135,7 +135,7 @@ function initMap() {
 
     card.setAttribute('id', 'pac-card');
     title.setAttribute('id', 'title');
-    title.textContent = 'Find the nearest store';
+    title.textContent = 'Find your nearest business';
     titleBar.appendChild(title);
     container.setAttribute('id', 'pac-container');
     input.setAttribute('id', 'pac-input');
@@ -258,6 +258,9 @@ function showStoresList(data, stores) {
     if (panel.classList.contains('open')) {
       panel.classList.remove('open');
     }
+    if (panel.classList.contains('hidden')) {
+      panel.classList.remove('hidden');
+    }
   } else {
     panel.setAttribute('id', 'panel');
     // const body = document.body;
@@ -266,11 +269,18 @@ function showStoresList(data, stores) {
     map.appendChild(panel);
   }
 
-
   // Clear the previous details
   while (panel.lastChild) {
     panel.removeChild(panel.lastChild);
   }
+
+  var x = document.createElement('div');
+  x.setAttribute('class', 'close fas fa-window-close fa-2x');
+  panel.appendChild(x);
+
+  $('.close').click(function () {
+    panel.classList.add('hidden');
+  });
 
   stores.forEach((store) => {
     // Add store details with text formatting
