@@ -229,7 +229,7 @@ async function calculateDistances(data, origin) {
     origins: [origin],
     destinations: destinations,
     travelMode: 'DRIVING',
-    unitSystem: google.maps.UnitSystem.METRIC,
+    unitSystem: google.maps.UnitSystem.IMPERIAL,
   });
 
   distancesList.sort((first, second) => {
