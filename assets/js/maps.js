@@ -79,40 +79,36 @@ function initMap() {
     // Create the map.
     const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 7,
-    center: {lat: 52.632469, lng: -1.689423},
+    center: {lat: 52.36642190000001, lng: -1.2777807},
     styles: mapStyle,
     });
 
     // Load the stores GeoJSON onto the map.
-    map.data.loadGeoJson('stores.json', {idPropertyName: 'storeid'});
+    map.data.loadGeoJson('businesses.json', {idPropertyName: 'storeid'});
 
     // Define the custom marker icons, using the store's "category".
     map.data.setStyle((feature) => {
     return {
         icon: {
-        url: `images/icon_${feature.getProperty('category')}.png`,
-        scaledSize: new google.maps.Size(64, 64),
+        url: `images/${feature.getProperty('service')}.png`,
+        scaledSize: new google.maps.Size(32, 32),
         },
     };
     });
 
-    const apiKey = 'AIzaSyDqglJSf_vJ6tO7diX8Un6e93BykZiZDk4';
     const infoWindow = new google.maps.InfoWindow();
 
     // Show the information for a store when its marker is clicked.
     map.data.addListener('click', (event) => {
-    const category = event.feature.getProperty('category');
-    const name = event.feature.getProperty('name');
-    const description = event.feature.getProperty('description');
-    const hours = event.feature.getProperty('hours');
-    const phone = event.feature.getProperty('phone');
+    const name = event.feature.getProperty('businessName');
+    const gmapURL = event.feature.getProperty('businessGmapURL');
+    const websiteURL = event.feature.getProperty('businessWebsite');
     const position = event.feature.getGeometry().get();
     const content = `
-        <img style="float:left; width:200px; margin-top:30px" src="images/logo_${category}.png">
-        <div style="margin-left:220px; margin-bottom:20px;">
-        <h2>${name}</h2><p>${description}</p>
-        <p><b>Open:</b> ${hours}<br/><b>Phone:</b> ${phone}</p>
-        <p><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=${apiKey}"></p>
+        <div style="margin:10px;">
+        <h2><b>${name}</b></h2>
+        <h4><a href="${websiteURL}" target="_blank">Business website</a></h4>
+        <h4><a href="${gmapURL}" target="_blank">Google Maps location</a></h4>
         </div>
         `;
 
@@ -175,7 +171,6 @@ function initMap() {
     originLocation = place.geometry.location;
     map.setCenter(originLocation);
     map.setZoom(9);
-    console.log(place);
 
     originMarker.setPosition(originLocation);
     originMarker.setVisible(true);
@@ -287,12 +282,14 @@ function showStoresList(data, stores) {
     const name = document.createElement('p');
     name.classList.add('place');
     const currentStore = data.getFeatureById(store.storeid);
-    name.textContent = currentStore.getProperty('name');
+    name.textContent = currentStore.getProperty('businessName');
     panel.appendChild(name);
     const distanceText = document.createElement('p');
     distanceText.classList.add('distanceText');
     distanceText.textContent = store.distanceText;
     panel.appendChild(distanceText);
+    const ruler = document.createElement('hr');
+    panel.appendChild(ruler);
   });
 
   // Open the panel

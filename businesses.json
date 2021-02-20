@@ -1,0 +1,39 @@
+{
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    -1.2777807,
+                    52.36642190000001
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "businessGmapURL": "https://maps.google.com/?cid=1569049482479895236",
+                "businessName": "Fish Plus",
+                "businessWebsite": "https://m.facebook.com/fishplusrugby/",
+                "service": "food",
+                "storeid": "0"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -0.209092,
+                    51.49334899999999
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "businessGmapURL": "https://maps.google.com/?cid=14684440038186064087",
+                "businessName": "The Grooming Cave",
+                "businessWebsite": "https://www.groomingcave.co.uk/",
+                "service": "haircut",
+                "storeid": "1"
+            },
+            "type": "Feature"
+        }
+    ],
+    "type": "FeatureCollection"
+}
