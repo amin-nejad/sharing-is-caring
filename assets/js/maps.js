@@ -286,8 +286,28 @@ function showStoresList(data, stores) {
     panel.appendChild(name);
     const distanceText = document.createElement('p');
     distanceText.classList.add('distanceText');
-    distanceText.textContent = store.distanceText;
+    distanceText.textContent = store.distanceText + " - ";
     panel.appendChild(distanceText);
+    
+    const website = document.createElement('a');
+    website.href = currentStore.getProperty('businessWebsite')
+    website.target = '_blank'
+    const websiteLink = document.createElement('i');
+    websiteLink.classList.add('fas')
+    websiteLink.classList.add('fa-globe')
+    website.appendChild(websiteLink)
+    distanceText.appendChild(website)
+
+    const gmap = document.createElement('a');
+    gmap.href = currentStore.getProperty('businessGmapURL')
+    gmap.target = '_blank'
+    const gmapLink = document.createElement('i');
+    gmapLink.classList.add('fab')
+    gmapLink.classList.add('fa-google')
+    gmap.style = "padding-left: 8px;"
+    gmap.appendChild(gmapLink)
+    distanceText.appendChild(gmap)
+
     const ruler = document.createElement('hr');
     panel.appendChild(ruler);
   });
