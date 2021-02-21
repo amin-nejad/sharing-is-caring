@@ -107,11 +107,9 @@
 
 						<!-- Map-->
 						<section id="map" class="main special">
-							<script src="assets/js/maps.js"></script>
-							<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-							<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqglJSf_vJ6tO7diX8Un6e93BykZiZDk4&libraries=places&callback=initMap">
-							</script>
 						</section>
+						<div class="hidden" id="legend">
+						</div>
 					</div>
 
 					<p class="copyright" style="font-size: 16px">
@@ -153,5 +151,9 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/maps.js"></script>
+			<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqglJSf_vJ6tO7diX8Un6e93BykZiZDk4&libraries=places&callback=initMap">
+			</script>
 	</body>
 </html>

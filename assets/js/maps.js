@@ -118,6 +118,21 @@ function initMap() {
     infoWindow.open(map);
     });
 
+    // Add legend
+    const services = ['food', 'haircut', 'groceries', 'other']
+    const legend = document.getElementById('legend');
+    for (var id in services) {
+      var div = document.createElement('div');
+      div.innerHTML = '<img src="images/' + services[id] + '.png"> ' + services[id];
+      div.classList.add('legendItem')
+      legend.appendChild(div);
+    }
+    map.controls[google.maps.ControlPosition.RIGHT].push(legend);
+
+    if (legend.classList.contains('hidden')) {
+      legend.classList.remove('hidden');
+    }
+
     // Build and add the search bar
     const card = document.createElement('div');
     const titleBar = document.createElement('div');
