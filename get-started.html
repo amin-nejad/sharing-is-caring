@@ -50,7 +50,6 @@
 
         	google.maps.event.addDomListener(window, 'load', init);
 
-
 		</script>
 		<script>
 			$('#register').ajaxForm({
@@ -131,10 +130,10 @@
 									<input type="text" id="gmap" size="50" required><br>
 
 									<label for="businessName">Business Name:</label>
-									<input type="text" id="businessName" name="businessName" style="color: #a73939" required readonly><br>
+									<input type="text" id="businessName" name="businessName" style="caret-color: transparent !important; color:#a73939;" required onkeydown="return false;"><br>
 
 									<label for="gmapWebsite">Website:</label>
-									<input type="url" id="gmapWebsite" name="gmapWebsite" style="color: #a73939" required readonly><br>									
+									<input type="url" id="gmapWebsite" name="gmapWebsite" style="caret-color: transparent !important; color:#a73939;" required onkeydown="return false;"><br>									
 									
 									<label for="service">Service:</label>
 									<input type="radio" id="food" name="service" value="food" required>
