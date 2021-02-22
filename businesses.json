@@ -16,6 +16,23 @@
                 "storeid": "0"
             },
             "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -1.2775825,
+                    52.36640529999999
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "businessGmapURL": "https://maps.google.com/?cid=4272375943100080389",
+                "businessName": "It Just Got Personal",
+                "businessWebsite": "http://www.itjustgotpersonal.shop/",
+                "service": "other",
+                "storeid": "1"
+            },
+            "type": "Feature"
         }
     ],
     "type": "FeatureCollection"

@@ -20,7 +20,7 @@ geojson = {
             "service": d['service'],
             "storeid": str(i),
         },
-     } for i, (_, d) in enumerate(registrations.items())]
+     } for i, (_, d) in enumerate(registrations.items()) if d['verified'] == "Y"]
 }
 
 with open('businesses.json', 'w') as f:
