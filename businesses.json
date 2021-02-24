@@ -33,6 +33,57 @@
                 "storeid": "1"
             },
             "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -1.2595138,
+                    52.3722731
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "businessGmapURL": "https://maps.google.com/?cid=13673078538864226178",
+                "businessName": "Mister Robinson's Barber Shop & Gentlemans Supplies",
+                "businessWebsite": "https://www.instagram.com/mrrobinsons/",
+                "service": "haircut",
+                "storeid": "4"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -1.281301,
+                    52.3901008
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "businessGmapURL": "https://maps.google.com/?cid=9523629919992892879",
+                "businessName": "Fishsmiths",
+                "businessWebsite": "http://www.fishsmiths.co.uk/",
+                "service": "food",
+                "storeid": "5"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -0.1283206,
+                    51.6328609
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "businessGmapURL": "https://maps.google.com/?cid=16168066996744801007",
+                "businessName": "Alex's Cypriot Sandwiches and Soup",
+                "businessWebsite": "undefinedhttps://instagram.com/alexscypriotsandwiches?igshid=4tmcgylcusob",
+                "service": "food",
+                "storeid": "6"
+            },
+            "type": "Feature"
         }
     ],
     "type": "FeatureCollection"
