@@ -114,20 +114,20 @@
 
 								<form id="register" action="/api/register" method="post">
 									
-									<label for="name">Name:</label>
+									<label for="name">Name:<span style="color: #ff0000">*</span></label>
 									<input type="text" id="name" name="name" required><br>
-									<label for="email">Email:</label>
+									<label for="email">Email:<span style="color: #ff0000">*</span></label>
 									<input type="email" id="email" name="email" required><br>
 
 									<label for="gmap">
-										Google Maps Location: 
+										Find your Business:<span style="color: #ff0000">*</span>
 										<div class="tooltip"><i class="fas fa-info-circle"></i>
 											<span class="tooltiptext">
-												This will be used to find the location of your business to display on the map and get the name and website.
+												This will be used to get the name, website and location of your business.
 											</span>
 										</div>
 									</label>
-									<input type="text" id="gmap" size="50" required><br>
+									<input type="text" id="gmap" size="50" placeholder="Search your Business by name" required><br>
 
 									<label for="businessName">Business Name:</label>
 									<input type="text" id="businessName" name="businessName" style="caret-color: transparent !important; color:#a73939;" required onkeydown="return false;"><br>
@@ -135,7 +135,7 @@
 									<label for="gmapWebsite">Website:</label>
 									<input type="url" id="gmapWebsite" name="gmapWebsite" style="caret-color: transparent !important; color:#a73939;" required onkeydown="return false;"><br>									
 									
-									<label for="service">Service:</label>
+									<label for="service">Service:<span style="color: #ff0000">*</span></label>
 									<input type="radio" id="food" name="service" value="food" required>
 									<label for="food">Food</label><br>
 									<input type="radio" id="groceries" name="service" value="groceries">
@@ -151,7 +151,7 @@
 									<input type="hidden" id="gmapPlaceID" name="gmapPlaceID">
 
 									<input type="checkbox" id="consent" name="consent" value="consent" required>
-									<label for="consent"> I consent to Sharing is Caring Serve our Nation storing my personal information for the purposes of this charitable scheme and nothing else.</label><br><br>
+									<label for="consent"><span style="color: #ff0000">*</span> I consent to Sharing is Caring Serve our Nation storing my personal information for the purposes of this charitable scheme and nothing else.</label><br><br>
 
 									<div class="wrapper" style="text-align: center;">
 										<input type="submit" id="submit-form">
