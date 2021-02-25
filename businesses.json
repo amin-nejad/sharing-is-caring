@@ -84,6 +84,40 @@
                 "storeid": "6"
             },
             "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -1.1211893,
+                    52.37331229999999
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "businessGmapURL": "https://maps.google.com/?cid=13886770090627607529",
+                "businessName": "Knightley Arms",
+                "businessWebsite": "http://www.knightleyarmsyelvertoft.co.uk/",
+                "service": "food",
+                "storeid": "7"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -0.423579,
+                    53.7765567
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "businessGmapURL": "https://maps.google.com/?cid=11454129937168009343",
+                "businessName": "Fab Fish",
+                "businessWebsite": "https://www.fabfish.uk/",
+                "service": "food",
+                "storeid": "8"
+            },
+            "type": "Feature"
         }
     ],
     "type": "FeatureCollection"
