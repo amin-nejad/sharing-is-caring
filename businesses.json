@@ -118,6 +118,23 @@
                 "storeid": "8"
             },
             "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -1.2318863,
+                    52.36169899999999
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "businessGmapURL": "https://maps.google.com/?cid=2924296232079880046",
+                "businessName": "Olivia's Coffee House",
+                "businessWebsite": "https://www.oliviascoffee.co.uk/",
+                "service": "food",
+                "storeid": "11"
+            },
+            "type": "Feature"
         }
     ],
     "type": "FeatureCollection"
