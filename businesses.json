@@ -3,173 +3,173 @@
         {
             "geometry": {
                 "coordinates": [
-                    -1.8614817, 
-                    52.4290609
-                ], 
-                "type": "Point"
-            }, 
-            "properties": {
-                "businessGmapURL": "https://maps.google.com/?cid=7230514151026057996", 
-                "businessName": "Franco & Pedro barbering", 
-                "businessWebsite": "http://francoandpedro.nearcut.com/", 
-                "service": "haircut", 
-                "storeid": "0"
-            }, 
-            "type": "Feature"
-        }, 
-        {
-            "geometry": {
-                "coordinates": [
-                    -0.1283206, 
-                    51.6328609
-                ], 
-                "type": "Point"
-            }, 
-            "properties": {
-                "businessGmapURL": "https://maps.google.com/?cid=16168066996744801007", 
-                "businessName": "Alex's Cypriot Sandwiches and Soup", 
-                "businessWebsite": "https://instagram.com/alexscypriotsandwiches?igshid=4tmcgylcusob", 
-                "service": "food", 
-                "storeid": "1"
-            }, 
-            "type": "Feature"
-        }, 
-        {
-            "geometry": {
-                "coordinates": [
-                    -1.281301, 
-                    52.3901008
-                ], 
-                "type": "Point"
-            }, 
-            "properties": {
-                "businessGmapURL": "https://maps.google.com/?cid=9523629919992892879", 
-                "businessName": "Fishsmiths", 
-                "businessWebsite": "http://www.fishsmiths.co.uk/", 
-                "service": "food", 
-                "storeid": "2"
-            }, 
-            "type": "Feature"
-        }, 
-        {
-            "geometry": {
-                "coordinates": [
-                    -1.2777807, 
+                    -1.2777807,
                     52.36642190000001
-                ], 
+                ],
                 "type": "Point"
-            }, 
+            },
             "properties": {
-                "businessGmapURL": "https://maps.google.com/?cid=1569049482479895236", 
-                "businessName": "Fish Plus", 
-                "businessWebsite": "https://m.facebook.com/fishplusrugby/", 
-                "service": "food", 
-                "storeid": "3"
-            }, 
+                "businessGmapURL": "https://maps.google.com/?cid=1569049482479895236",
+                "businessName": "Fish Plus",
+                "businessWebsite": "https://m.facebook.com/fishplusrugby/",
+                "service": "food",
+                "storeid": "0"
+            },
             "type": "Feature"
-        }, 
+        },
         {
             "geometry": {
                 "coordinates": [
-                    -1.2775825, 
+                    -1.2775825,
                     52.36640529999999
-                ], 
+                ],
                 "type": "Point"
-            }, 
+            },
             "properties": {
-                "businessGmapURL": "https://maps.google.com/?cid=4272375943100080389", 
-                "businessName": "It Just Got Personal", 
-                "businessWebsite": "http://www.itjustgotpersonal.shop/", 
-                "service": "other", 
-                "storeid": "4"
-            }, 
+                "businessGmapURL": "https://maps.google.com/?cid=4272375943100080389",
+                "businessName": "It Just Got Personal",
+                "businessWebsite": "http://www.itjustgotpersonal.shop/",
+                "service": "other",
+                "storeid": "1"
+            },
             "type": "Feature"
-        }, 
+        },
         {
             "geometry": {
                 "coordinates": [
-                    -1.1211893, 
-                    52.37331229999999
-                ], 
-                "type": "Point"
-            }, 
-            "properties": {
-                "businessGmapURL": "https://maps.google.com/?cid=13886770090627607529", 
-                "businessName": "Knightley Arms", 
-                "businessWebsite": "http://www.knightleyarmsyelvertoft.co.uk/", 
-                "service": "food", 
-                "storeid": "5"
-            }, 
-            "type": "Feature"
-        }, 
-        {
-            "geometry": {
-                "coordinates": [
-                    -1.2318863, 
-                    52.36169899999999
-                ], 
-                "type": "Point"
-            }, 
-            "properties": {
-                "businessGmapURL": "https://maps.google.com/?cid=2924296232079880046", 
-                "businessName": "Olivia's Coffee House", 
-                "businessWebsite": "https://www.oliviascoffee.co.uk/", 
-                "service": "food", 
-                "storeid": "6"
-            }, 
-            "type": "Feature"
-        }, 
-        {
-            "geometry": {
-                "coordinates": [
-                    -1.2217885, 
-                    52.3621181
-                ], 
-                "type": "Point"
-            }, 
-            "properties": {
-                "businessGmapURL": "https://maps.google.com/?cid=1368947480965022743", 
-                "businessName": "Hillmorton Fish Saloon", 
-                "businessWebsite": "https://www.facebook.com/Hillmorton-Fish-Saloon-118220431555231/", 
-                "service": "food", 
-                "storeid": "7"
-            }, 
-            "type": "Feature"
-        }, 
-        {
-            "geometry": {
-                "coordinates": [
-                    -1.2595138, 
+                    -1.2595138,
                     52.3722731
-                ], 
+                ],
                 "type": "Point"
-            }, 
+            },
             "properties": {
-                "businessGmapURL": "https://maps.google.com/?cid=13673078538864226178", 
-                "businessName": "Mister Robinson's Barber Shop & Gentlemans Supplies", 
-                "businessWebsite": "https://www.instagram.com/mrrobinsons/", 
-                "service": "haircut", 
-                "storeid": "8"
-            }, 
+                "businessGmapURL": "https://maps.google.com/?cid=13673078538864226178",
+                "businessName": "Mister Robinson's Barber Shop & Gentlemans Supplies",
+                "businessWebsite": "https://www.instagram.com/mrrobinsons/",
+                "service": "haircut",
+                "storeid": "4"
+            },
             "type": "Feature"
-        }, 
+        },
         {
             "geometry": {
                 "coordinates": [
-                    -0.423579, 
-                    53.7765567
-                ], 
+                    -1.281301,
+                    52.3901008
+                ],
                 "type": "Point"
-            }, 
+            },
             "properties": {
-                "businessGmapURL": "https://maps.google.com/?cid=11454129937168009343", 
-                "businessName": "Fab Fish", 
-                "businessWebsite": "https://www.fabfish.uk/", 
-                "service": "food", 
+                "businessGmapURL": "https://maps.google.com/?cid=9523629919992892879",
+                "businessName": "Fishsmiths",
+                "businessWebsite": "http://www.fishsmiths.co.uk/",
+                "service": "food",
+                "storeid": "5"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -0.1283206,
+                    51.6328609
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "businessGmapURL": "https://maps.google.com/?cid=16168066996744801007",
+                "businessName": "Alex's Cypriot Sandwiches and Soup",
+                "businessWebsite": "https://instagram.com/alexscypriotsandwiches?igshid=4tmcgylcusob",
+                "service": "food",
+                "storeid": "6"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -1.1211893,
+                    52.37331229999999
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "businessGmapURL": "https://maps.google.com/?cid=13886770090627607529",
+                "businessName": "Knightley Arms",
+                "businessWebsite": "http://www.knightleyarmsyelvertoft.co.uk/",
+                "service": "food",
+                "storeid": "7"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -0.423579,
+                    53.7765567
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "businessGmapURL": "https://maps.google.com/?cid=11454129937168009343",
+                "businessName": "Fab Fish",
+                "businessWebsite": "https://www.fabfish.uk/",
+                "service": "food",
+                "storeid": "8"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -1.2318863,
+                    52.36169899999999
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "businessGmapURL": "https://maps.google.com/?cid=2924296232079880046",
+                "businessName": "Olivia's Coffee House",
+                "businessWebsite": "https://www.oliviascoffee.co.uk/",
+                "service": "food",
+                "storeid": "11"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -1.2217885,
+                    52.3621181
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "businessGmapURL": "https://maps.google.com/?cid=1368947480965022743",
+                "businessName": "Hillmorton Fish Saloon",
+                "businessWebsite": "https://www.facebook.com/Hillmorton-Fish-Saloon-118220431555231/",
+                "service": "food",
+                "storeid": "12"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -1.8614817,
+                    52.4290609
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "businessGmapURL": "https://maps.google.com/?cid=7230514151026057996",
+                "businessName": "Franco & Pedro barbering",
+                "businessWebsite": "http://francoandpedro.nearcut.com/",
+                "service": "haircut",
                 "storeid": "13"
-            }, 
+            },
             "type": "Feature"
         }
-    ], 
+    ],
     "type": "FeatureCollection"
 }
