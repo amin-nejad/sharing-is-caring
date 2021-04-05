@@ -43,6 +43,7 @@ exports.handler = async (event) => {
         };
         console.log('sending confirmation email')
         transporter.sendMail(mailOptions, function(error, info){
+          console.log('sending confirmation email2')
           if (error) {
             console.log(error);
             return error
