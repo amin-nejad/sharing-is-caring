@@ -43,16 +43,14 @@ exports.handler = async (event) => {
         console.log(smtpURL)
         let transporter = nodemailer.createTransport(smtpURL)
         console.log('creating nodemailer transporter')
-        transporter.sendMail(mailOptions, function(error, info){
-          console.log('sending confirmation email')
-          if (error) {
-            console.log(error);
-            return error
-          } else {
-            console.log('Email sent: ' + info.response);
-            return info.response
-          }
-        });
+
+        transporter.sendMail(mailOptions, (err, info) => {
+            console.log(err);
+            console.log(info.envelope);
+            console.log(info.messageId);
+            console.log(info.response);
+          });
+      
         console.log('sent email')  
       })
       .then((result) => {
