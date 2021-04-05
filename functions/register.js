@@ -13,7 +13,7 @@ const firebaseConfig = {
   appId: "1:668790316116:web:f5a416eb1b98cf4f4de1c1"
 };
 
-exports.handler = async (event) => {
+exports.handler = function(event, context, callback) {
 
 
   if (!firebase.apps.length) {
@@ -44,11 +44,13 @@ exports.handler = async (event) => {
         let transporter = nodemailer.createTransport(smtpURL)
         console.log('creating nodemailer transporter')
 
-        transporter.sendMail(mailOptions, (err, info) => {
-            console.log(err);
-            console.log(info.envelope);
-            console.log(info.messageId);
-            console.log(info.response);
+        transporter.sendMail(mailOptions, function(error, info) {
+            if (error) {
+              console.log(error);
+              callback(error);
+            } else {
+              console.log('hurrah')
+            }
           });
       
         console.log('sent email')  
