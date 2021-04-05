@@ -2,7 +2,6 @@ const firebase = require('firebase')
 const qs = require('querystring');
 var nodemailer = require('nodemailer');
 const smtpURL = process.env.SMTP_URL;
-let transporter = nodemailer.createTransport(smtpURL)
 
 const firebaseConfig = {
   apiKey: "AIzaSyCNGralWpRTUNJgPJdJLOYcZ4xXj-gxBC8",
@@ -41,9 +40,11 @@ exports.handler = async (event) => {
           <p>Kind regards,<br>Andreas</p>
           <p>NB. This mailbox is not monitored. If you need to get in touch, contact us on <a href="mailto:hello@sharingiscaring.charity">hello@sharingiscaring.charity</a></p>`,
         };
-        console.log('sending confirmation email')
+        console.log(smtpURL)
+        let transporter = nodemailer.createTransport(smtpURL)
+        console.log('creating nodemailer transporter')
         transporter.sendMail(mailOptions, function(error, info){
-          console.log('sending confirmation email2')
+          console.log('sending confirmation email')
           if (error) {
             console.log(error);
             return error
@@ -51,7 +52,8 @@ exports.handler = async (event) => {
             console.log('Email sent: ' + info.response);
             return info.response
           }
-        });  
+        });
+        console.log('sent email')  
       })
       .then((result) => {
         return {
