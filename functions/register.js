@@ -41,7 +41,7 @@ exports.handler = async (event) => {
           <p>Kind regards,<br>Andreas</p>
           <p>NB. This mailbox is not monitored. If you need to get in touch, contact us on <a href="mailto:hello@sharingiscaring.charity">hello@sharingiscaring.charity</a></p>`,
         };
-        
+        console.log('sending confirmation email')
         transporter.sendMail(mailOptions, function(error, info){
           if (error) {
             console.log(error);
